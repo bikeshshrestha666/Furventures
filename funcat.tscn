@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://cnqeuxwjsiq1g"]
+[gd_scene load_steps=11 format=3 uid="uid://cnqeuxwjsiq1g"]
 
 [ext_resource type="Texture2D" uid="uid://j1p178bl8tiq" path="res://WhiteCatIdle.png" id="1_5xtlw"]
+[ext_resource type="Script" path="res://funcat.cs" id="1_f8cja"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ht3ms"]
 atlas = ExtResource("1_5xtlw")
@@ -57,6 +58,7 @@ radius = 6.0
 height = 12.0
 
 [node name="Cat" type="CharacterBody2D"]
+script = ExtResource("1_f8cja")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_w7kfu")
@@ -66,3 +68,6 @@ frame_progress = 0.935609
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1)
 shape = SubResource("CapsuleShape2D_k5vxs")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)

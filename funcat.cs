@@ -36,4 +36,5 @@ public partial class funcat : CharacterBody2D
 		Velocity = velocity;
 		MoveAndSlide();
 	}
+	
 }
